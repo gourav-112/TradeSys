@@ -1,0 +1,10 @@
+^C:\ME\ASS\TRADESIM\BUILD\CMAKEFILES\E1152609478842C06ED0D4EDEB0F85C9\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/ME/Ass/TradeSim -BC:/ME/Ass/TradeSim/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/ME/Ass/TradeSim/build/TradeSim.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

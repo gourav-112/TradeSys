@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/ME/Ass/TradeSim/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

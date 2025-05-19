@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/external/include",
+                "${workspaceFolder}/external/imgui/backends",
+                "${workspaceFolder}/external/imgui",
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/vcpkg/installed/x64-windows/include",
+                "${workspaceFolder}/vcpkg/installed/x64-windows/include/SDL2",
+                "${workspaceFolder}/vcpkg/installed/x64-windows/lib",
+                "${workspaceFolder}/vcpkg/installed/x64-windows/debug/lib",
+                "${workspaceFolder}/vcpkg/installed/x64-windows/tools",
+                "${workspaceFolder}/vcpkg/installed/x64-windows/tools/boost",
+                "${workspaceFolder}/vcpkg/installed/x64-windows/tools/boost/include",
+                "${workspaceFolder}/vcpkg/installed/x64-windows/tools/boost/lib",
+                "${workspaceFolder}/vcpkg/installed/x64-windows/tools/boost/debug/include",
+                "${workspaceFolder}/vcpkg/installed/x64-windows/tools/boost/debug/lib"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.22621.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}

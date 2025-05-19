@@ -1,0 +1,10 @@
+C:\ME\Ass\TradeSim\src\main.cpp;C:\ME\Ass\TradeSim\build\tradesim.dir\Debug\main.obj
+C:\ME\Ass\TradeSim\src\logger.cpp;C:\ME\Ass\TradeSim\build\tradesim.dir\Debug\logger.obj
+C:\ME\Ass\TradeSim\src\orderbook.cpp;C:\ME\Ass\TradeSim\build\tradesim.dir\Debug\orderbook.obj
+C:\ME\Ass\TradeSim\src\webSocketClient.cpp;C:\ME\Ass\TradeSim\build\tradesim.dir\Debug\webSocketClient.obj
+C:\ME\Ass\TradeSim\external\imgui\imgui.cpp;C:\ME\Ass\TradeSim\build\tradesim.dir\Debug\imgui.obj
+C:\ME\Ass\TradeSim\external\imgui\imgui_draw.cpp;C:\ME\Ass\TradeSim\build\tradesim.dir\Debug\imgui_draw.obj
+C:\ME\Ass\TradeSim\external\imgui\imgui_tables.cpp;C:\ME\Ass\TradeSim\build\tradesim.dir\Debug\imgui_tables.obj
+C:\ME\Ass\TradeSim\external\imgui\imgui_widgets.cpp;C:\ME\Ass\TradeSim\build\tradesim.dir\Debug\imgui_widgets.obj
+C:\ME\Ass\TradeSim\external\imgui\backends\imgui_impl_sdl2.cpp;C:\ME\Ass\TradeSim\build\tradesim.dir\Debug\imgui_impl_sdl2.obj
+C:\ME\Ass\TradeSim\external\imgui\backends\imgui_impl_opengl3.cpp;C:\ME\Ass\TradeSim\build\tradesim.dir\Debug\imgui_impl_opengl3.obj

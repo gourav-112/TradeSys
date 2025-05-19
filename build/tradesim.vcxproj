@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D839E60E-EFBE-356A-BEF6-8F263A09A926}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>tradesim</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\ME\Ass\TradeSim\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tradesim.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tradesim</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\ME\Ass\TradeSim\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tradesim.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tradesim</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\ME\Ass\TradeSim\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">tradesim.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">tradesim</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\ME\Ass\TradeSim\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">tradesim.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">tradesim</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ME\Ass\TradeSim\include;C:\ME\Ass\TradeSim\external\imgui\backends;C:\ME\Ass\TradeSim\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/ME/Ass/TradeSim/vcpkg/installed/x64-windows/include" /external:I "C:/ME/Ass/TradeSim/vcpkg/installed/x64-windows/include/ixwebsocket" /external:I "C:/ME/Ass/TradeSim/vcpkg/installed/x64-windows/include/SDL2"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;IXWEBSOCKET_USE_TLS;IXWEBSOCKET_USE_MBED_TLS;IXWEBSOCKET_USE_ZLIB;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;IXWEBSOCKET_USE_TLS;IXWEBSOCKET_USE_MBED_TLS;IXWEBSOCKET_USE_ZLIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ME\Ass\TradeSim\include;C:\ME\Ass\TradeSim\external\imgui\backends;C:\ME\Ass\TradeSim\external\imgui;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include\ixwebsocket;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\ME\Ass\TradeSim\include;C:\ME\Ass\TradeSim\external\imgui\backends;C:\ME\Ass\TradeSim\external\imgui;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include\ixwebsocket;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/ME/Ass/TradeSim/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/ME/Ass/TradeSim/build/Debug/tradesim.exe -installedDir C:/ME/Ass/TradeSim/vcpkg/installed/x64-windows/debug/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\debug\lib\ixwebsocket.lib;bcrypt.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\debug\lib\manual-link\SDL2maind.lib;opengl32.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\debug\lib\imguid.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\debug\lib\SDL2_imaged.lib;ws2_32.lib;crypt32.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\debug\lib\mbedtls.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\debug\lib\mbedx509.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\debug\lib\mbedcrypto.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\debug\lib\zlibd.lib;wsock32.lib;shlwapi.lib;Crypt32.lib;ws2_32.lib;shell32.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\debug\lib\SDL2d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/ME/Ass/TradeSim/build/Debug/tradesim.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/ME/Ass/TradeSim/build/Debug/tradesim.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ME\Ass\TradeSim\include;C:\ME\Ass\TradeSim\external\imgui\backends;C:\ME\Ass\TradeSim\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/ME/Ass/TradeSim/vcpkg/installed/x64-windows/include" /external:I "C:/ME/Ass/TradeSim/vcpkg/installed/x64-windows/include/ixwebsocket" /external:I "C:/ME/Ass/TradeSim/vcpkg/installed/x64-windows/include/SDL2"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IXWEBSOCKET_USE_TLS;IXWEBSOCKET_USE_MBED_TLS;IXWEBSOCKET_USE_ZLIB;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IXWEBSOCKET_USE_TLS;IXWEBSOCKET_USE_MBED_TLS;IXWEBSOCKET_USE_ZLIB;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ME\Ass\TradeSim\include;C:\ME\Ass\TradeSim\external\imgui\backends;C:\ME\Ass\TradeSim\external\imgui;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include\ixwebsocket;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\ME\Ass\TradeSim\include;C:\ME\Ass\TradeSim\external\imgui\backends;C:\ME\Ass\TradeSim\external\imgui;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include\ixwebsocket;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/ME/Ass/TradeSim/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/ME/Ass/TradeSim/build/Release/tradesim.exe -installedDir C:/ME/Ass/TradeSim/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\ixwebsocket.lib;bcrypt.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\manual-link\SDL2main.lib;opengl32.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\imgui.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\SDL2_image.lib;ws2_32.lib;crypt32.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\mbedtls.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\mbedx509.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\mbedcrypto.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\zlib.lib;wsock32.lib;shlwapi.lib;Crypt32.lib;ws2_32.lib;shell32.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\SDL2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/ME/Ass/TradeSim/build/Release/tradesim.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/ME/Ass/TradeSim/build/Release/tradesim.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ME\Ass\TradeSim\include;C:\ME\Ass\TradeSim\external\imgui\backends;C:\ME\Ass\TradeSim\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/ME/Ass/TradeSim/vcpkg/installed/x64-windows/include" /external:I "C:/ME/Ass/TradeSim/vcpkg/installed/x64-windows/include/ixwebsocket" /external:I "C:/ME/Ass/TradeSim/vcpkg/installed/x64-windows/include/SDL2"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IXWEBSOCKET_USE_TLS;IXWEBSOCKET_USE_MBED_TLS;IXWEBSOCKET_USE_ZLIB;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IXWEBSOCKET_USE_TLS;IXWEBSOCKET_USE_MBED_TLS;IXWEBSOCKET_USE_ZLIB;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ME\Ass\TradeSim\include;C:\ME\Ass\TradeSim\external\imgui\backends;C:\ME\Ass\TradeSim\external\imgui;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include\ixwebsocket;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\ME\Ass\TradeSim\include;C:\ME\Ass\TradeSim\external\imgui\backends;C:\ME\Ass\TradeSim\external\imgui;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include\ixwebsocket;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/ME/Ass/TradeSim/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/ME/Ass/TradeSim/build/MinSizeRel/tradesim.exe -installedDir C:/ME/Ass/TradeSim/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\ixwebsocket.lib;bcrypt.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\manual-link\SDL2main.lib;opengl32.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\imgui.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\SDL2_image.lib;ws2_32.lib;crypt32.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\mbedtls.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\mbedx509.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\mbedcrypto.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\zlib.lib;wsock32.lib;shlwapi.lib;Crypt32.lib;ws2_32.lib;shell32.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\SDL2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/ME/Ass/TradeSim/build/MinSizeRel/tradesim.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/ME/Ass/TradeSim/build/MinSizeRel/tradesim.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ME\Ass\TradeSim\include;C:\ME\Ass\TradeSim\external\imgui\backends;C:\ME\Ass\TradeSim\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/ME/Ass/TradeSim/vcpkg/installed/x64-windows/include" /external:I "C:/ME/Ass/TradeSim/vcpkg/installed/x64-windows/include/ixwebsocket" /external:I "C:/ME/Ass/TradeSim/vcpkg/installed/x64-windows/include/SDL2"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IXWEBSOCKET_USE_TLS;IXWEBSOCKET_USE_MBED_TLS;IXWEBSOCKET_USE_ZLIB;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IXWEBSOCKET_USE_TLS;IXWEBSOCKET_USE_MBED_TLS;IXWEBSOCKET_USE_ZLIB;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ME\Ass\TradeSim\include;C:\ME\Ass\TradeSim\external\imgui\backends;C:\ME\Ass\TradeSim\external\imgui;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include\ixwebsocket;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\ME\Ass\TradeSim\include;C:\ME\Ass\TradeSim\external\imgui\backends;C:\ME\Ass\TradeSim\external\imgui;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include\ixwebsocket;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/ME/Ass/TradeSim/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/ME/Ass/TradeSim/build/RelWithDebInfo/tradesim.exe -installedDir C:/ME/Ass/TradeSim/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\ixwebsocket.lib;bcrypt.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\manual-link\SDL2main.lib;opengl32.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\imgui.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\SDL2_image.lib;ws2_32.lib;crypt32.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\mbedtls.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\mbedx509.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\mbedcrypto.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\zlib.lib;wsock32.lib;shlwapi.lib;Crypt32.lib;ws2_32.lib;shell32.lib;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\lib\SDL2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/ME/Ass/TradeSim/build/RelWithDebInfo/tradesim.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/ME/Ass/TradeSim/build/RelWithDebInfo/tradesim.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\ME\Ass\TradeSim\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/ME/Ass/TradeSim/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/ME/Ass/TradeSim -BC:/ME/Ass/TradeSim/build --check-stamp-file C:/ME/Ass/TradeSim/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\ME\Ass\TradeSim\build\CMakeFiles\4.0.2\CMakeCXXCompiler.cmake;C:\ME\Ass\TradeSim\build\CMakeFiles\4.0.2\CMakeRCCompiler.cmake;C:\ME\Ass\TradeSim\build\CMakeFiles\4.0.2\CMakeSystem.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_image-shared-targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_image-shared-targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_image-shared-targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_imageConfig.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_imageConfigVersion.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttf-shared-targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttf-shared-targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttf-shared-targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttfConfig.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttfConfigVersion.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\imgui\imgui-config.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\imgui\imgui-targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\imgui\imgui-targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\imgui\imgui-targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\ixwebsocket\ixwebsocket-config.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\ixwebsocket\ixwebsocket-targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\ixwebsocket\ixwebsocket-targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\ixwebsocket\ixwebsocket-targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfig.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfigVersion.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonTargets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\png\vcpkg-cmake-wrapper.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2Config.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2ConfigVersion.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\sdlfind.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;C:\ME\Ass\TradeSim\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FeatureSummary.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\SelectLibraryConfigurations.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\ME\Ass\TradeSim\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/ME/Ass/TradeSim/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/ME/Ass/TradeSim -BC:/ME/Ass/TradeSim/build --check-stamp-file C:/ME/Ass/TradeSim/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\ME\Ass\TradeSim\build\CMakeFiles\4.0.2\CMakeCXXCompiler.cmake;C:\ME\Ass\TradeSim\build\CMakeFiles\4.0.2\CMakeRCCompiler.cmake;C:\ME\Ass\TradeSim\build\CMakeFiles\4.0.2\CMakeSystem.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_image-shared-targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_image-shared-targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_image-shared-targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_imageConfig.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_imageConfigVersion.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttf-shared-targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttf-shared-targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttf-shared-targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttfConfig.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttfConfigVersion.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\imgui\imgui-config.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\imgui\imgui-targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\imgui\imgui-targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\imgui\imgui-targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\ixwebsocket\ixwebsocket-config.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\ixwebsocket\ixwebsocket-targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\ixwebsocket\ixwebsocket-targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\ixwebsocket\ixwebsocket-targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfig.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfigVersion.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonTargets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\png\vcpkg-cmake-wrapper.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2Config.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2ConfigVersion.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\sdlfind.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;C:\ME\Ass\TradeSim\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FeatureSummary.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\SelectLibraryConfigurations.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\ME\Ass\TradeSim\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/ME/Ass/TradeSim/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/ME/Ass/TradeSim -BC:/ME/Ass/TradeSim/build --check-stamp-file C:/ME/Ass/TradeSim/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\ME\Ass\TradeSim\build\CMakeFiles\4.0.2\CMakeCXXCompiler.cmake;C:\ME\Ass\TradeSim\build\CMakeFiles\4.0.2\CMakeRCCompiler.cmake;C:\ME\Ass\TradeSim\build\CMakeFiles\4.0.2\CMakeSystem.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_image-shared-targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_image-shared-targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_image-shared-targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_imageConfig.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_imageConfigVersion.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttf-shared-targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttf-shared-targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttf-shared-targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttfConfig.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttfConfigVersion.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\imgui\imgui-config.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\imgui\imgui-targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\imgui\imgui-targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\imgui\imgui-targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\ixwebsocket\ixwebsocket-config.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\ixwebsocket\ixwebsocket-targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\ixwebsocket\ixwebsocket-targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\ixwebsocket\ixwebsocket-targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfig.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfigVersion.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonTargets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\png\vcpkg-cmake-wrapper.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2Config.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2ConfigVersion.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\sdlfind.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;C:\ME\Ass\TradeSim\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FeatureSummary.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\SelectLibraryConfigurations.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\ME\Ass\TradeSim\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/ME/Ass/TradeSim/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/ME/Ass/TradeSim -BC:/ME/Ass/TradeSim/build --check-stamp-file C:/ME/Ass/TradeSim/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\ME\Ass\TradeSim\build\CMakeFiles\4.0.2\CMakeCXXCompiler.cmake;C:\ME\Ass\TradeSim\build\CMakeFiles\4.0.2\CMakeRCCompiler.cmake;C:\ME\Ass\TradeSim\build\CMakeFiles\4.0.2\CMakeSystem.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_image-shared-targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_image-shared-targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_image-shared-targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_imageConfig.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_image\SDL2_imageConfigVersion.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttf-shared-targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttf-shared-targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttf-shared-targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttfConfig.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\SDL2_ttf\SDL2_ttfConfigVersion.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\imgui\imgui-config.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\imgui\imgui-targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\imgui\imgui-targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\imgui\imgui-targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\ixwebsocket\ixwebsocket-config.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\ixwebsocket\ixwebsocket-targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\ixwebsocket\ixwebsocket-targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\ixwebsocket\ixwebsocket-targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfig.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfigVersion.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_jsonTargets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\png\vcpkg-cmake-wrapper.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2Config.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2ConfigVersion.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2Targets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-debug.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets-release.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\SDL2mainTargets.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\sdl2\sdlfind.cmake;C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;C:\ME\Ass\TradeSim\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FeatureSummary.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-4.0\Modules\SelectLibraryConfigurations.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\ME\Ass\TradeSim\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\ME\Ass\TradeSim\src\main.cpp" />
+    <ClCompile Include="C:\ME\Ass\TradeSim\src\logger.cpp" />
+    <ClCompile Include="C:\ME\Ass\TradeSim\src\orderbook.cpp" />
+    <ClCompile Include="C:\ME\Ass\TradeSim\src\webSocketClient.cpp" />
+    <ClCompile Include="C:\ME\Ass\TradeSim\external\imgui\imgui.cpp" />
+    <ClCompile Include="C:\ME\Ass\TradeSim\external\imgui\imgui_draw.cpp" />
+    <ClCompile Include="C:\ME\Ass\TradeSim\external\imgui\imgui_tables.cpp" />
+    <ClCompile Include="C:\ME\Ass\TradeSim\external\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="C:\ME\Ass\TradeSim\external\imgui\backends\imgui_impl_sdl2.cpp" />
+    <ClCompile Include="C:\ME\Ass\TradeSim\external\imgui\backends\imgui_impl_opengl3.cpp" />
+    <Natvis Include="C:\ME\Ass\TradeSim\vcpkg\installed\x64-windows\share\nlohmann_json\nlohmann_json.natvis">
+    </Natvis>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\ME\Ass\TradeSim\build\ZERO_CHECK.vcxproj">
+      <Project>{4EACC6CA-1576-3AD1-B23C-55FF98D4BF3A}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

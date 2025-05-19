@@ -1,0 +1,10 @@
+^C:\ME\ASS\TRADESIM\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/ME/Ass/TradeSim -BC:/ME/Ass/TradeSim/build --check-stamp-file C:/ME/Ass/TradeSim/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
