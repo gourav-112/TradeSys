@@ -8,30 +8,34 @@
 #include <chrono>
 
 class Orderbook {
-private:
-    // Price -> Quantity
-    std::map<double, double, std::greater<>> bids;  // highest first
-    std::map<double, double> asks;                  // lowest first
-
-    mutable std::mutex mtx; // For thread safety
-    std::chrono::steady_clock::time_point lastUpdateTime;
-
 public:
     Orderbook() = default;
 
-    // Update entire snapshot from JSON string (L2 level)
+    // Updates the entire snapshot from a raw JSON string (OKX L2 depth format)
     void updateFromJson(const std::string& jsonString);
 
-    // Return best bid and best ask
+    // Returns best bid (highest buy price)
     double getBestBid() const;
+
+    // Returns best ask (lowest sell price)
     double getBestAsk() const;
 
-    double simulateMarketBuy(double usdAmount);   // consumes from asks
-    double simulateMarketSell(double usdAmount);  // consumes from bids
+    // Simulates a market buy (consumes from asks)
+    double simulateMarketBuy(double usdAmount);
 
+    // Simulates a market sell (consumes from bids)
+    double simulateMarketSell(double usdAmount);
 
-    // Optional: get full depth (e.g., for slippage modeling)
+    // Optional: get top N price levels
     std::vector<std::pair<double, double>> getBidLevels(size_t depth = 10) const;
     std::vector<std::pair<double, double>> getAskLevels(size_t depth = 10) const;
-    std::chrono::steady_clock::time_point getLastUpdateTime(); 
+
+    // Returns the time of last update
+    std::chrono::steady_clock::time_point getLastUpdateTime() const;
+
+private:
+    std::map<double, double, std::greater<>> bids;  // price -> quantity
+    std::map<double, double> asks;
+    mutable std::mutex mtx;
+    std::chrono::steady_clock::time_point lastUpdateTime;
 };

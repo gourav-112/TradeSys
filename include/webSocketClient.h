@@ -1,31 +1,33 @@
 #pragma once
 
-#include <string>
-#include <functional>
-#include <memory>
-#include "orderbook.h"
 #include <ixwebsocket/IXWebSocket.h>
-
-struct Order {
-    double price;
-    double quantity;
-};
-
-struct OrderBookSnapshot {
-    std::vector<Order> bids;
-    std::vector<Order> asks;
-};
+#include <string>
+#include <atomic>
+#include <thread>
+#include "orderbook.h"
 
 class WebSocketClient {
 public:
     WebSocketClient(const std::string& url, Orderbook& ob);
+    ~WebSocketClient();
+
     void start();
     void stop();
-    void connect();
 
 private:
+    void connect();
+    void subscribeToOrderbook();
+
     std::string endpointUrl;
     Orderbook& orderbook;
     ix::WebSocket webSocket_;
-    bool running = false;
+    std::atomic<bool> running;
+
+    void runLoop();  // <- This is the reconnection loop
+    void subscribeToOrderbook();
+    void handleMessage(const std::string& message);
+
+    std::thread workerThread;
+    std::mutex mtx;
+    std::condition_variable cv;
 };

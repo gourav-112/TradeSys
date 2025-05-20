@@ -1,30 +1,46 @@
-#include "orderbook.h"
+#include "Orderbook.h"
 #include <nlohmann/json.hpp>
-#include <sstream>
+#include <iostream>
 
 using json = nlohmann::json;
 
-void Orderbook::updateFromJson(const std::string& jsonStr) {
+void Orderbook::updateFromJson(const std::string& jsonString) {
     std::lock_guard<std::mutex> lock(mtx);
-    
-    json j = json::parse(jsonStr);
 
-    // Clear old data
-    bids.clear();
-    asks.clear();
+    try {
+        auto j = json::parse(jsonString);
 
-    // Parse bids
-    for (const auto& bid : j["bids"]) {
-        double price = std::stod(bid[0].get<std::string>());
-        double qty   = std::stod(bid[1].get<std::string>());
-        if (qty > 0) bids[price] = qty;
-    }
+        // This assumes OKX L2 message: { "arg": {...}, "data": [ { "bids": [...], "asks": [...] } ] }
+        if (!j.contains("data") || !j["data"].is_array() || j["data"].empty()) {
+            std::cerr << "[Orderbook] Malformed update JSON: no data array\n";
+            return;
+        }
 
-    // Parse asks
-    for (const auto& ask : j["asks"]) {
-        double price = std::stod(ask[0].get<std::string>());
-        double qty   = std::stod(ask[1].get<std::string>());
-        if (qty > 0) asks[price] = qty;
+        const auto& book = j["data"][0];
+
+        if (book.contains("bids")) {
+            bids.clear();
+            for (const auto& level : book["bids"]) {
+                if (level.size() < 2) continue;
+                double price = std::stod(level[0].get<std::string>());
+                double quantity = std::stod(level[1].get<std::string>());
+                if (quantity > 0.0) bids[price] = quantity;
+            }
+        }
+
+        if (book.contains("asks")) {
+            asks.clear();
+            for (const auto& level : book["asks"]) {
+                if (level.size() < 2) continue;
+                double price = std::stod(level[0].get<std::string>());
+                double quantity = std::stod(level[1].get<std::string>());
+                if (quantity > 0.0) asks[price] = quantity;
+            }
+        }
+
+        lastUpdateTime = std::chrono::steady_clock::now();
+    } catch (const std::exception& e) {
+        std::cerr << "[Orderbook] Failed to parse/update: " << e.what() << '\n';
     }
 }
 
@@ -38,11 +54,58 @@ double Orderbook::getBestAsk() const {
     return asks.empty() ? 0.0 : asks.begin()->first;
 }
 
+double Orderbook::simulateMarketBuy(double usdAmount) {
+    std::lock_guard<std::mutex> lock(mtx);
+    double remaining = usdAmount;
+    double cost = 0.0;
+
+    for (auto it = asks.begin(); it != asks.end() && remaining > 0; ++it) {
+        double price = it->first;
+        double qty = it->second;
+        double value = price * qty;
+
+        if (value <= remaining) {
+            cost += value;
+            remaining -= value;
+        } else {
+            double partialQty = remaining / price;
+            cost += partialQty * price;
+            remaining = 0;
+        }
+    }
+
+    return remaining > 0 ? 0.0 : cost / (usdAmount / getBestAsk());  // normalized average
+}
+
+double Orderbook::simulateMarketSell(double usdAmount) {
+    std::lock_guard<std::mutex> lock(mtx);
+    double remaining = usdAmount;
+    double cost = 0.0;
+
+    for (auto it = bids.begin(); it != bids.end() && remaining > 0; ++it) {
+        double price = it->first;
+        double qty = it->second;
+        double value = price * qty;
+
+        if (value <= remaining) {
+            cost += value;
+            remaining -= value;
+        } else {
+            double partialQty = remaining / price;
+            cost += partialQty * price;
+            remaining = 0;
+        }
+    }
+
+    return remaining > 0 ? 0.0 : cost / (usdAmount / getBestBid());
+}
+
 std::vector<std::pair<double, double>> Orderbook::getBidLevels(size_t depth) const {
     std::lock_guard<std::mutex> lock(mtx);
     std::vector<std::pair<double, double>> levels;
-    for (auto it = bids.begin(); it != bids.end() && levels.size() < depth; ++it) {
-        levels.emplace_back(it->first, it->second);
+    for (const auto& [price, qty] : bids) {
+        levels.emplace_back(price, qty);
+        if (levels.size() >= depth) break;
     }
     return levels;
 }
@@ -50,51 +113,14 @@ std::vector<std::pair<double, double>> Orderbook::getBidLevels(size_t depth) con
 std::vector<std::pair<double, double>> Orderbook::getAskLevels(size_t depth) const {
     std::lock_guard<std::mutex> lock(mtx);
     std::vector<std::pair<double, double>> levels;
-    for (auto it = asks.begin(); it != asks.end() && levels.size() < depth; ++it) {
-        levels.emplace_back(it->first, it->second);
+    for (const auto& [price, qty] : asks) {
+        levels.emplace_back(price, qty);
+        if (levels.size() >= depth) break;
     }
     return levels;
 }
 
-std::chrono::steady_clock::time_point Orderbook::getLastUpdateTime() {
+std::chrono::steady_clock::time_point Orderbook::getLastUpdateTime() const {
     std::lock_guard<std::mutex> lock(mtx);
     return lastUpdateTime;
-}
-
-double Orderbook::simulateMarketBuy(double usdAmount) {
-    std::lock_guard<std::mutex> lock(mtx);
-    double remaining = usdAmount;
-    double totalQty = 0.0;
-
-    for (const auto& [price, qty] : asks) {
-        double levelCost = price * qty;
-        if (levelCost <= remaining) {
-            totalQty += qty;
-            remaining -= levelCost;
-        } else {
-            totalQty += remaining / price;
-            break;
-        }
-    }
-
-    return totalQty; // total asset units bought
-}
-
-double Orderbook::simulateMarketSell(double usdAmount) {
-    std::lock_guard<std::mutex> lock(mtx);
-    double remaining = usdAmount;
-    double totalQty = 0.0;
-
-    for (const auto& [price, qty] : bids) {
-        double levelValue = price * qty;
-        if (levelValue <= remaining) {
-            totalQty += qty;
-            remaining -= levelValue;
-        } else {
-            totalQty += remaining / price;
-            break;
-        }
-    }
-
-    return totalQty; // total asset units sold
 }
